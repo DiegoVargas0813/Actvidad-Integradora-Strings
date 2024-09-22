@@ -1,0 +1,7 @@
+Diego Enrique Vargas Ramírez - A01635782
+
+
+
+Francisco Javier Romo Juárez - A01643189
+
+    LCS (Longest Common Substring - Part 3) FUNCTION IMPLEMENTATION 
