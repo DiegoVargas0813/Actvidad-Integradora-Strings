@@ -173,8 +173,61 @@ void manacher(vector<string> transmission) {
         }
 
         cout << "Line: " << t << " Start: " << (centerIndex - maxLen)/2 << " End: " << ((centerIndex - maxLen)/2) + maxLen - 1 << endl;
+
+
     }
 }
+
+void LCS(vector<string> transmissionOne, vector<string> transmissionTwo) { //Longest Common Substring
+    string transmissionOneString = "";
+    string transmissionTwoString = "";
+
+    // Concatenate all lines of transmissionOne into a string
+    for(int i = 0; i < transmissionOne.size(); i++) {
+        transmissionOneString.append(transmissionOne[i]);
+    }
+
+    // Same for transmissionTwo
+    for(int i = 0; i < transmissionTwo.size(); i++) {
+        transmissionTwoString.append(transmissionTwo[i]);
+    }
+
+    int n = transmissionOneString.length();
+    int m = transmissionTwoString.length();
+    int maxSize = 0; // Size of longest common substring
+    int endIndex = 0; // End index of longest common substring
+
+    // Create a table to store the lengths of common substrings
+    vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+
+    // Fill the table
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= m; j++) {
+            if (transmissionOneString[i - 1] == transmissionTwoString[j - 1]) {
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+                if (dp[i][j] > maxSize) {
+                    maxSize = dp[i][j];
+                    endIndex = i - 1;
+                }
+            } else {
+                dp[i][j] = 0;
+            }
+        }
+    }
+
+
+    // Calculate start and end positions
+    int startIndex = endIndex - maxSize + 2; 
+    int endIndexFinal = endIndex + 1; 
+
+    cout << "Inicial Position: " << startIndex << " Final Position: " << endIndexFinal << endl;
+
+    // Longest common substring
+    string longestCommonSubstring = transmissionOneString.substr(endIndex - maxSize + 1, maxSize);
+
+    cout << "Longest Common Substring: " << longestCommonSubstring << endl;
+}
+
 
 int main(){
     vector<string> transmissionOne;
@@ -191,6 +244,8 @@ int main(){
     manacher(transmissionOne);
 
     manacher(transmissionTwo);
+
+    LCS(transmissionOne, transmissionTwo);
 
     //cout << preManacher(codeOne);
 
