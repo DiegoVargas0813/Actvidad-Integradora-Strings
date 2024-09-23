@@ -8,3 +8,6 @@ Ernesto Puga Araujo - A00572845 Checar que las complejidades sean correctas.
 Francisco Javier Romo Juárez - A01643189
 
     LCS (Longest Common Substring - Part 3) FUNCTION IMPLEMENTATION 
+
+Iñaki González Morales - A01612126
+    -Descripción de las funciones del programa y análisis del código.
