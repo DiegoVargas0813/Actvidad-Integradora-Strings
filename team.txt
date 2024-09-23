@@ -1,4 +1,6 @@
 Diego Enrique Vargas Ramírez - A01635782
+    Codificacion de algoritmo KMP y Manacher
+
 Luis Marco Barriga Baez - A01643954
     Complejidad de cada funcion y del codigo completo
 
