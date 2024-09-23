@@ -2,6 +2,7 @@ Diego Enrique Vargas Ramírez - A01635782
 Luis Marco Barriga Baez - A01643954
     Complejidad de cada funcion y del codigo completo
 
+Ernesto Puga Araujo - A00572845 Checar que las complejidades sean correctas.
 
 
 Francisco Javier Romo Juárez - A01643189
