@@ -13,3 +13,6 @@ Francisco Javier Romo Juárez - A01643189
 
 Iñaki González Morales - A01612126
     -Descripción de las funciones del programa y análisis del código.
+
+Adair Virgilio Figueroa Medina - A00572826
+    -Revision y apoyo externo de los procesos del codigo
